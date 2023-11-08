@@ -1,6 +1,6 @@
-﻿namespace SignalR.EntityLayer.Concrete
+﻿namespace SignalR.DTOLayer.DTOs.DiscountDTOs
 {
-    public class Discount
+    public class UpdateDiscountDTO
     {
         public int DiscountID { get; set; }
         public string Title { get; set; }

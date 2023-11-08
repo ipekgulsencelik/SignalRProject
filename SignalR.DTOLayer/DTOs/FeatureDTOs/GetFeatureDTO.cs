@@ -1,6 +1,6 @@
-﻿namespace SignalR.EntityLayer.Concrete
+﻿namespace SignalR.DTOLayer.DTOs.FeatureDTOs
 {
-    public class Feature
+    public class GetFeatureDTO
     {
         public int FeatureID { get; set; }
         public string Title1 { get; set; }
