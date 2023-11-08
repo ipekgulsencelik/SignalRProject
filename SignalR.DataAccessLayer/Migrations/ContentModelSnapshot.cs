@@ -10,7 +10,7 @@ using SignalR.DataAccessLayer.Concrete;
 
 namespace SignalR.DataAccessLayer.Migrations
 {
-    [DbContext(typeof(Content))]
+    [DbContext(typeof(Context))]
     partial class ContentModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

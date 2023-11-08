@@ -11,7 +11,7 @@ using SignalR.DataAccessLayer.Concrete;
 
 namespace SignalR.DataAccessLayer.Migrations
 {
-    [DbContext(typeof(Content))]
+    [DbContext(typeof(Context))]
     [Migration("20231108103624_initialize")]
     partial class initialize
     {

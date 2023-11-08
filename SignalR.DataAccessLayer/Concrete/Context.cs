@@ -3,7 +3,7 @@ using SignalR.EntityLayer.Concrete;
 
 namespace SignalR.DataAccessLayer.Concrete
 {
-    public class Content : DbContext
+    public class Context : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
