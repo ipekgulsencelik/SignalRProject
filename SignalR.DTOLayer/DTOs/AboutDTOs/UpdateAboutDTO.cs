@@ -1,6 +1,6 @@
 ﻿namespace SignalR.DTOLayer.DTOs.AboutDTOs
 {
-    public class UpdateAboutDAL
+    public class UpdateAboutDTO
     {
         public int AboutID { get; set; }
         public string ImageURL { get; set; }
