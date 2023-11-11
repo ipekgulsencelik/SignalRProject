@@ -34,6 +34,12 @@ builder.Services.AddScoped<IFeatureDAL, EFFeatureDAL>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<IProductDAL, EFProductDAL>();
 
+builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+builder.Services.AddScoped<ITestimonialDAL, EFTestimonialDAL>();
+
+builder.Services.AddScoped<ISocialMediaService, SocialMediaManager>();
+builder.Services.AddScoped<ISocialMediaDAL, EFSocialMediaDAL>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
