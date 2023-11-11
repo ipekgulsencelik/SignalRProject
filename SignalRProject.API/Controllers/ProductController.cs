@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SignalR.BusinessLayer.Abstract;
+using SignalR.DataAccessLayer.Concrete;
 using SignalR.DTOLayer.DTOs.ProductDTO;
 using SignalR.EntityLayer.Concrete;
 
@@ -24,6 +26,23 @@ namespace SignalRProject.API.Controllers
         {
             var value = _mapper.Map<List<ResultProductDTO>>(_productService.TGetListAll());
             return Ok(value);
+        }
+
+        [HttpGet("ProductListWithCategory")]
+        public IActionResult ProductListWithCategory()
+        {
+            var context = new Context();
+            var values = context.Products.Include(x => x.Category).Select(y => new ResultProductWithCategory
+            {
+                Description = y.Description,
+                ImageURL = y.ImageURL,
+                Price = y.Price,
+                ProductID = y.ProductID,
+                ProductName = y.ProductName,
+                ProductStatus = y.ProductStatus,
+                CategoryName = y.Category.CategoryName
+            });
+            return Ok(values.ToList());
         }
 
         [HttpPost]
