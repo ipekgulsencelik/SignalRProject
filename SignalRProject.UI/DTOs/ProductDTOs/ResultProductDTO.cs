@@ -1,6 +1,6 @@
-﻿namespace SignalR.DTOLayer.DTOs.ProductDTO
+﻿namespace SignalRProject.UI.DTOs.ProductDTOs
 {
-    public class GetProductDTO
+    public class ResultProductDTO
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
@@ -8,6 +8,6 @@
         public decimal Price { get; set; }
         public string ImageURL { get; set; }
         public bool ProductStatus { get; set; }
-        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
     }
 }

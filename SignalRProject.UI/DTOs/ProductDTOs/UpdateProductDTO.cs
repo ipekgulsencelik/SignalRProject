@@ -1,6 +1,6 @@
-﻿namespace SignalR.DTOLayer.DTOs.ProductDTO
+﻿namespace SignalRProject.UI.DTOs.ProductDTOs
 {
-    public class GetProductDTO
+    public class UpdateProductDTO
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
