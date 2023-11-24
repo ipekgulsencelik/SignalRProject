@@ -26,6 +26,12 @@ namespace SignalRProject.API.Controllers
             return Ok(value);
         }
 
+        [HttpGet("CategoryCount")]
+        public IActionResult CategoryCount()
+        {
+            return Ok(_categoryService.TCategoryCount());
+        }
+
         [HttpPost]
         public IActionResult CreateCategory(CreateCategoryDTO createCategoryDTO)
         {
